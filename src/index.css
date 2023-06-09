@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.mt-17 {
+    margin-top: 3.75rem;
+}
+
+.mt-33 {
+    margin-top: 7.5rem;
+}
+
+.content-main {
+    height: calc(100% - 3.75rem);
+}
+
+@media (max-height: 600px) {
+    .content-main {
+        position: relative;
+        top: 10%;
+    }
+}
+
+.min-height {
+    min-height: 1000px;
+}
+
+.container-header {
+    width: 100%;
+    max-width: 1440px;
+}
+
+.border-bottom-w-1 {
+    border-bottom-width: 1px;
+}
+
+.border-w-1 {
+    border-width: 1px;
+}
+
+.text-main {
+    width: auto;
+    max-width: 768px;
+}
+
+.bg-computer-main {
+    width: 100%;
+    height: 23rem
+}
+
+.button-to-next-step>svg {
+    transition: 0.3s;
+    z-index: 0;
+    position: relative;
+    top: 5rem;
+}
+
+.button-to-next-step:hover svg {
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .media-about-me {
+        flex-direction: column;
+    }
+}
+
+.bg-default-all-img {
+	border-radius: 4px;
+}
+
+
+.bg-coffe-img {
+	background-image: url('./assets/coffe-img.png');
+}
+
+.bg-country-img {
+	background-image: url('./assets/country-img.png');
+}
+
+.bg-todo-list-img {
+	background-image: url('./assets/todo-list-img.png');
+}
+
+
+		
