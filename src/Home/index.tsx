@@ -57,7 +57,7 @@ export function Home() {
               >
                 <Button 
                   text="Projetos" 
-                  icon={<ArrowDown size={24}/>}
+                  icon={<ArrowDown size={24} 	/>}
                 />
               </Link>
               <a 

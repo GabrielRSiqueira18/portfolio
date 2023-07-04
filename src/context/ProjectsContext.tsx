@@ -15,7 +15,7 @@ interface Projects {
 	imgUrl: string
 	linkSite: string
 	linkGithub: string
-	type: 'front-end' | 'back-end'
+	type: 'front-end' | 'backend'
 	libs: Libs[]
 }
 
@@ -33,19 +33,19 @@ const projects: Projects[] = [
 		type: "front-end",
 		libs: [
 			{
-				name: 'zod',
+				name: 'Zod',
 				description: 'validar formulários',
 			},
 			{
-				name: 'styled-components',
+				name: 'Styled-components',
 				description: 'Criar componentes já estilizados',
 			},
 			{
-				name: 'immer',
+				name: 'Immer',
 				description: 'Facilitar as alterações do useReduzer() facilitando as alterações dos estados',
 			},
 			{
-				name: 'date-fns',
+				name: 'Date-fns',
 				description: 'Usar datas e manipular de uma forma mais simples',
 			}
 		]
@@ -59,15 +59,37 @@ const projects: Projects[] = [
 		type: "front-end",
 		libs: [
 			{
-				name: 'axios',
+				name: 'Axios',
 				description: 'Realizar requisões http com mais facilidade',
 			},
 			{
-				name: 'styled-components',
+				name: 'Styled-components',
 				description: 'Criar componentes já estilizados',
 			},
 		]
-	}
+	},
+	{
+		id: 1,
+		name: "Api Meals",
+		imgUrl: "",
+		linkSite: "",
+		linkGithub: "https://github.com/GabrielRSiqueira18/ignite-challange-meals-02/tree/main",
+		type: "backend",
+		libs: [
+			{
+				name: 'Fastify',
+				description: 'Micro-framework para melhorar a criar um servidor http e usar requisões como um todo.',
+			},
+			{
+				name: 'Knex',
+				description: 'QueryBuilder para usar banco de dados como mais facilidades.',
+			},
+			{
+				name: 'Zod',
+				description: 'validar dados da aplicação.',
+			},
+		]
+	},
 ]
 
 export const ProjectsContext = createContext({} as ProjectsContextType)
