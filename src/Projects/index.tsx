@@ -1,7 +1,7 @@
-import { ArrowCircleDown } from "phosphor-react";
-import { Button } from "../components/Button";
-import { useContext } from "react";
-import { ProjectsContext } from "../context/ProjectsContext";
+import { ArrowCircleDown } from "phosphor-react"
+import { useContext } from "react"
+import { ProjectsContext } from "../context/ProjectsContext"
+import { Link } from "react-router-dom"
 
 export function Projects() {
 	const { projects } = useContext(ProjectsContext)
@@ -18,27 +18,26 @@ export function Projects() {
 
 						{projects.map(project => {
 							return (
-								<div key={project.id} className="bg-gray-100 dark:bg-gray-900 rounded-md shadow-2xl p-4">
-									<h2 className="text-gray-800 dark:text-gray-100 text-base font-normal text-center">{project.name}</h2>
-									<div  className="flex gap-4 m-auto justify-center mt-4">
-										<a target="_blank" href={project.linkSite} className="border-w-1 border-transparent bg-gray-100 dark:bg-gray-900 rounded-lg font-bold dark:text-gray-200 dark:hover:bg-transparent dark:hover:border-gray-600 transition dark:hover:text-gray-400 text-gray-800 hover:text-gray-500 hover:bg-transparent hover:border-gray-400 p-2 flex gap-1 justify-center items-center button-to-next-step overflow-hidden shadow-lg cursor-pointer">Link do site</a>
-										<a target="_blank" href={project.linkGithub} className="border-w-1 border-transparent bg-gray-100 dark:bg-gray-900 rounded-lg font-bold dark:text-gray-200 dark:hover:bg-transparent dark:hover:border-gray-600 transition dark:hover:text-gray-400 text-gray-800 hover:text-gray-500 hover:bg-transparent hover:border-gray-400 p-2 flex gap-1 justify-center items-center button-to-next-step overflow-hidden shadow-lg cursor-pointer">Link Github</a>
+								<div key={project.id} className="bg-gray-100 dark:bg-gray-900 rounded-md shadow-2xl p-4 w-full">
+									<div className="w-full flex flex-col items-center gap-2">
+										<h2 className="text-gray-800 dark:text-gray-100 text-base font-normal">{project.name}</h2>
+										<span className="capitalize">{project.type}</span>
+									</div>
+									<div  className="flex gap-4 m-auto justify-center mt-2">
+										<a target="_blank" href={project.linkSite} className="border-w-1 border-transparent bg-gray-100 dark:bg-gray-800 rounded-lg font-bold dark:text-gray-200 dark:hover:bg-transparent dark:hover:border-gray-600 transition dark:hover:text-gray-400 text-gray-800 hover:text-gray-500 hover:bg-transparent hover:border-gray-400 p-2 flex gap-1 justify-center items-center button-to-next-step overflow-hidden shadow-lg cursor-pointer">Deploy</a>
+										<a target="_blank" href={project.linkGithub} className="border-w-1 border-transparent bg-gray-100 dark:bg-gray-800 rounded-lg font-bold dark:text-gray-200 dark:hover:bg-transparent dark:hover:border-gray-600 transition dark:hover:text-gray-400 text-gray-800 hover:text-gray-500 hover:bg-transparent hover:border-gray-400 p-2 flex gap-1 justify-center items-center button-to-next-step overflow-hidden shadow-lg cursor-pointer">Github</a>
 									</div>
 									<div className="mt-4">
-										<div className={`h-96 bg-${project.imgUrl} bg-cover bg-default-all-img bg-no-repeat hover:bg-cofee bg-gray-200 dark:bg-gray-950`}>
-										</div>
+										<Link to={project.name}>
+											<div className={`h-96 bg-${project.imgUrl} bg-cover bg-default-all-img bg-no-repeat hover:bg-cofee bg-gray-200 dark:bg-gray-950 cursor-pointer`} />
+										</Link>
 									</div>
 
 								</div>
 							)
 						})}
-
-            
-           
-            
-          </div>
-          <Button className="ml-2" text="Outros projetos"/>
-        </div>
+					</div>
+				</div>
       </div>
     </div>
   )
