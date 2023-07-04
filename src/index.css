@@ -9,6 +9,11 @@
     margin-top: 7.5rem;
 }
 
+.w-768 {
+	width: 100%;
+	max-width: 768px;
+}
+
 .content-main {
     height: calc(100% - 3.75rem);
 }

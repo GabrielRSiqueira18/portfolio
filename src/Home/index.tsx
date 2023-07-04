@@ -42,9 +42,9 @@ export function Home() {
           <div className="max-w-screen-xl w-full flex flex-col gap-12">
             <section>
               <div className="w-full flex">
-                <h2 className="font-bold text-2xl w-auto text-center border-bottom-w-1 border-gray-800 dark:border-gray-200 dark:text-gray-200 pb-1">Gabriel Ribeiro Siqueira</h2>
+                <h2 className="font-bold text-2xl w-auto text-center border-bottom-w-1 text-gray-950 border-gray-800 dark:border-gray-200 dark:text-gray-200 pb-1">Gabriel Ribeiro Siqueira</h2>
               </div>
-              <p className="text-main pt-4 dark:text-gray-200 h-auto">
+              <p className="text-main pt-4 text-gray-800 dark:text-gray-200 h-auto">
                 Conhecimentos em front-end usando majoritariamente a biblioteca react com a linguagem typescript. Começando a estudar Node, para ter conhecimentos tanto Front-end quanto Back-end.
                 Focado atualmente em conseguir uma vaga como programador front-end, porém para o futuro gostaria de trabalhar também na área de back-end.
               </p>

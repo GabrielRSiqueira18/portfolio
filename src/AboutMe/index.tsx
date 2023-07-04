@@ -3,7 +3,7 @@ import { SkillButton } from "./components/SkillButtons";
 
 export function AboutMe() {
   return (
-    <div id="about-me" className="flex justify-center items-center w-full shadow-lg h-full">
+    <div id="about-me" className="flex justify-center items-center w-full shadow-lg h-full bg-gray-200 dark:bg-gray-900">
       <div className="w-full h-full mt-33 bg-gray-200 dark:bg-gray-900 pb-20">
         <div className="max-w-7xl w-full m-auto">
           <h2 className="text-center font-bold text-gray-800 dark:text-gray-200 mt-8 text-3xl tracking-widest">SOBRE MIM</h2>

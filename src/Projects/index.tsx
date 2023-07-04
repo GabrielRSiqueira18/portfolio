@@ -7,7 +7,7 @@ export function Projects() {
 	const { projects } = useContext(ProjectsContext)
 
   return (
-    <div id="projects" className="flex justify-center items-center w-full shadow-lg h-full">
+    <div id="projects" className="flex justify-center items-center w-full shadow-lg h-full bg-gray-200 dark:bg-gray-900">
       <div className="w-full h-full mt-33 bg-gray-50 shadow-2xl dark:bg-gray-800 pb-20">
         <div className="max-w-7xl w-full m-auto p-4">
           <h2 className="text-center font-bold text-gray-800 dark:text-gray-200 mt-8 text-3xl tracking-widest">PROJETOS</h2>
@@ -17,10 +17,12 @@ export function Projects() {
           <div className="grid grid-cols-2 grid-rows-2 gap-4 p-2 md:flex md:flex-col">
 
 						{projects.map(project => {
+							const projectName = project.name.replace('-', ' ')
+
 							return (
 								<div key={project.id} className="bg-gray-100 dark:bg-gray-900 rounded-md shadow-2xl p-4 w-full">
 									<div className="w-full flex flex-col items-center gap-2">
-										<h2 className="text-gray-800 dark:text-gray-100 text-base font-normal">{project.name}</h2>
+										<h2 className="text-gray-800 dark:text-gray-100 text-base font-normal capitalize">{projectName}</h2>
 										<span className="capitalize">{project.type}</span>
 									</div>
 									<div  className="flex gap-4 m-auto justify-center mt-2">
